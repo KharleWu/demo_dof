@@ -7,7 +7,10 @@ authors = [
     { name = "Kharle Wu", email = "wukh@finance.nyc.gov" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "geopandas>=1.2.0",
+    "pandas>=3.1.0",
+]
 
 [project.scripts]
 uv-setting-demo = "uv_setting_demo:main"
@@ -15,3 +18,6 @@ uv-setting-demo = "uv_setting_demo:main"
 [build-system]
 requires = ["uv_build>=0.13.5,<0.14.0"]
 build-backend = "uv_build"
+
+[tool.uv]
+allow-insecure-host = ["pypi.org", "files.pythonhosted.org", "github.com"]
